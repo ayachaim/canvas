@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
-    <link rel="stylesheet" href="./style.css">
-    <meta charset="UTF-8">
+<link rel="stylesheet" href="./style.css">
+
+
+<head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>我的画板 canvas</title>
-    <canvas id="xxx" width=300 height=300><canvas/> //canvas
-    <div id=actions class="actions">
-     <button id=eraser>橡皮擦</button>
-     <button id=brush>画笔</button>
+    <!--获取设备宽度-->
+    <title>Canvas画板</title>
+</head>
+
+<body>
+    <canvas id="xxx" width=3 00px height=3 00px></canvas>
+    <div id=a ctions class="actions">
+        <svg id="pen" class="active icon" aria-hidden="true">
+            <use xlink:href="#icon-pen"></use>
+        </svg>
+        <svg id="eraser" class="icon" aria-hidden="true">
+            <use xlink:href="#icon-eraser"></use>
+        </svg>
+        <svg id="clear" class="icon" aria-hidden="true">
+            <use xlink:href="#icon-delete"></use>
+        </svg>
+        <svg id="download" class="icon" aria-hidden="true">
+            <use xlink:href="#icon-download"></use>
+        </svg>
     </div>
-    <script src="./main.js"></script>
+    <ol class="colors">
+        <li id="black" class="black active"></li>
+        <li id="red" class="red"></li>
+        <li id="green" class="green"></li>
+        <li id="blue" class="blue"></li>
+    </ol>
+    <ol class="sizes">
+        <li id="thin" class="thin"></li>
+        <li id="thick" class="thick"></li>
+    </ol>
+</body>
+<script src="./main.js"></script>
+<script src="//at.alicdn.com/t/font_712697_sdg7lrkzbn.js"></script>
+<!--iconfont路径没有协议，所以要选好http协议后使用-->
+
 </html>

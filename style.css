@@ -1,0 +1,113 @@
+ul,ol{list-style: none;}
+*{margin: 0;padding: 0;}
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.icon:hover{
+    background:rgba(119, 119, 136,0.5);
+}
+
+#xxx {
+    display: block;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body {
+    margin: 0px;
+    overflow: hidden;/*禁止滚动条*/
+    
+}
+
+.actions {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    padding: 20px;
+}
+.actions svg{
+    width: 1.5em;
+    height: 1.5em;
+    transition: all 0.3s;/*过渡：全部 0.3秒*/
+    margin: 0px 10px;
+}
+
+.actions svg.active{/*svg激活后加上红色*/
+    fill: red;
+    transform: scale(1.2);/*变化：比例（1.2倍）*/
+    
+}
+
+.actions>#brush {
+    display: none;
+}
+
+.actions.x>#brush {
+    display: inline-block;
+}
+
+.actions.x>#eraser {
+    display: none;
+}
+.colors{
+    position: fixed;
+    top: 60px;
+    left: 28px;
+    
+}
+.colors> li{
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.25);
+    border-radius: 50%;
+    margin: 10px 0px;
+    transition: all 0.3s;/*最好给大类，给子类可能功能用不了*/
+    
+}
+.colors>li.black{
+    background: black;
+}
+.colors> li.red{
+    background: red;
+}
+.colors> li.green{
+    background: green;
+}
+.colors> li.blue{
+    background: blue;
+}
+.colors> li.active{
+    box-shadow: 0 0 3px rgba(0,0,0,0.95);
+    transform: scale(1.2);   
+}
+.sizes {
+    position:fixed;
+    right: 20px;
+    top: 10px;
+}
+.sizes > li{
+    margin: 20px 0px;
+    
+}
+.sizes > .thin{
+    height: 10px;
+    width: 20px;
+    border-top: 3px solid black
+}
+.sizes> .thin:hover{
+    background:rgba(119, 119, 136,0.5);
+}
+.sizes > .thick{
+    height: 10px;
+    width: 20px;
+    border-top: 6px solid black
+}
+.sizes > .thick:hover{
+    background:rgba(119, 119, 136,0.5);
+}
